@@ -42,12 +42,12 @@
                 </HBox>
             <HBox alignment="BOTTOM_RIGHT">
                <children>
-                        <Button fx:id="btnConfirma" mnemonicParsing="false" onAction="#btnConfirmaClick" prefWidth="100.0" text="Confirma">
+                        <Button fx:id="btnConfirma" mnemonicParsing="false" onAction="#btnConfirmaClick" prefWidth="100.0" text="%btn.confirma.txt">
                             <graphic>
                                 <MaterialDesignIconView glyphName="CHECK" />
                             </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#btnCancelaClick" prefWidth="100.0" text="Cancela">
+                        <Button mnemonicParsing="false" onAction="#btnCancelaClick" prefWidth="100.0" text="%btn.cancela.txt">
                             <graphic>
                                 <MaterialDesignIconView glyphName="CLOSE" />
                             </graphic>

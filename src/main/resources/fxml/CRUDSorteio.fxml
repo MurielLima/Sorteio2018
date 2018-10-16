@@ -11,37 +11,49 @@
 <?import javafx.scene.layout.*?>
 <?import de.jensd.fx.glyphs.materialdesignicons.*?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="view.CRUDSorteioController">
-   <children>
-      <VBox prefHeight="400.0" prefWidth="600.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-             <Label fx:id="lblPremio">
-               <font>
-                  <Font name="Arial" size="14.0" />
-               </font>
-            </Label>
-             <TableView fx:id="tblView" prefHeight="350.0" prefWidth="310.0">
-                 <columns>
-                     <TableColumn prefWidth="75.0" text="%tbl.nome.txt">
-                         <cellValueFactory>
-                             <PropertyValueFactory property="nome" />
-                         </cellValueFactory>
-                     </TableColumn>
-                     <TableColumn prefWidth="75.0" text="%tbl.url.txt">
-                         <cellValueFactory>
-                             <PropertyValueFactory property="url" />
-                         </cellValueFactory>
-                     </TableColumn>
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CRUDSorteioController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="600.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="%lbl.premios.txt" />
+                        <Label fx:id="lblPremio">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <TableView fx:id="tblView" prefHeight="350.0" prefWidth="310.0">
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="%tbl.nome.txt">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="nome" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" text="%tbl.url.txt">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="url" />
+                            </cellValueFactory>
+                        </TableColumn>
          
-                 </columns>
+                    </columns>
                              
-             </TableView>
-             <Button mnemonicParsing="false" onAction="#btnSorteioClick" prefWidth="100.0" text="Iniciar Sorteio">
-    </Button>
-         </children>
-         <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </padding>
-      </VBox>
-   </children>
+                </TableView>
+                <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                    
+                        <Button fx:id="btnFecharSorteio" mnemonicParsing="false" onAction="#btnFecharSorteioClick" prefWidth="100.0" text="%btn.fechar.txt">
+                        </Button>
+                        <Button fx:id="btnIniciarSorteio" mnemonicParsing="false" onAction="#btnSorteioClick" prefWidth="100.0" text="%btn.iniciar.txt">
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </children>
 </AnchorPane>

@@ -84,7 +84,7 @@ public class CRUDPremioController implements Initializable {
 
     @FXML
     private void btnCancelaClick() {
-
+        anchorPane.getScene().getWindow().hide();
     }
 
     /**

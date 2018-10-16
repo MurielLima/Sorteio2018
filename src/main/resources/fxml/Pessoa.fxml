@@ -35,12 +35,12 @@
                 </HBox>
                 <TableView fx:id="tblView"  prefHeight="350.0" prefWidth="310.0">
                     <columns>
-                        <TableColumn prefWidth="75.0" text="%tbl.nome.txt">
+                        <TableColumn prefWidth="270.0" text="%tbl.nome.txt">
                             <cellValueFactory>
                                 <PropertyValueFactory property="nome" />
                             </cellValueFactory>
                         </TableColumn>
-                        <TableColumn prefWidth="75.0" text="%tbl.url.txt">
+                        <TableColumn prefWidth="305.0" text="%tbl.url.txt">
                             <cellValueFactory>
                                 <PropertyValueFactory property="url" />
                             </cellValueFactory>
@@ -51,17 +51,17 @@
                         <ContextMenu>
                             <items>
                                 
-                                <MenuItem fx:id="mnIncluir" mnemonicParsing="false" onAction="#acIncluir" text="Incluir">
+                                <MenuItem fx:id="mnIncluir" mnemonicParsing="false" onAction="#acIncluir" text="%mn.incluir.txt">
                                     <graphic>
                                         <MaterialDesignIconView glyphName="PLUS" size="1.1em" />
                                     </graphic>
                                 </MenuItem>
-                                <MenuItem fx:id="mnAlterar" mnemonicParsing="false" onAction="#acAlterar" text="Alterar">
+                                <MenuItem fx:id="mnAlterar" mnemonicParsing="false" onAction="#acAlterar" text="%mn.alterar.txt">
                                     <graphic>
                                         <MaterialDesignIconView glyphName="PENCIL" size="1.1em" />
                                     </graphic>
                                 </MenuItem>
-                                <MenuItem fx:id="mnExcluir" mnemonicParsing="false" onAction="#acExcluir" text="Excluir">
+                                <MenuItem fx:id="mnExcluir" mnemonicParsing="false" onAction="#acExcluir" text="%mn.excluir.txt">
                                     <graphic>
                                         <MaterialDesignIconView glyphName="DELETE" size="1.1em" />
                                     </graphic>

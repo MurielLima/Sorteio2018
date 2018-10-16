@@ -14,7 +14,6 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import model.Pessoa;
 import model.Premio;
@@ -43,12 +42,11 @@ public class SorteioController implements Initializable {
         String cena = "/fxml/CRUDSorteio.fxml";
         XPopOver popOver = null;
         popOver = new XPopOver(cena, "Sorteio", null);
-
         CRUDSorteioController controllerFilho = popOver.getLoader().getController();
         controllerFilho.setCadastroController(this);
     }
-public void iniciaListas(){
-       
+
+    public void iniciaListas() {
         for (Pessoa p : pessoaRepository.findAll(new Sort(new Sort.Order("nome")))) {
             if (p.isSorteado()) {
                 pessoa.add(p);
@@ -58,14 +56,17 @@ public void iniciaListas(){
             if (!p.isDisponivel()) {
                 premio.add(p);
             }
+            tblViewPessoa.refresh();
+            tblViewPremio.refresh();
+            tblViewPessoa.setItems(FXCollections.observableList(pessoa));
+            tblViewPremio.setItems(
+                    FXCollections.observableList(premio));
         }
-}
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    iniciaListas();
-        tblViewPessoa.setItems(FXCollections.observableList(pessoa));
-        tblViewPremio.setItems(
-                FXCollections.observableList(premio));
+        iniciaListas();
     }
 
 }

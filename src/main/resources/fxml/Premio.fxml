@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import de.jensd.fx.glyphs.materialdesignicons.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PremioController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="view.PremioController">
     <children>
         <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -33,14 +32,14 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </VBox.margin>    
                 </HBox>
-                <TableView fx:id="tblView"  prefHeight="350.0" prefWidth="310.0">
+                <TableView fx:id="tblView" prefHeight="350.0" prefWidth="310.0">
                     <columns>
-                        <TableColumn prefWidth="75.0" text="%tbl.nome.txt">
+                        <TableColumn prefWidth="270.0" text="%tbl.nome.txt">
                             <cellValueFactory>
                                 <PropertyValueFactory property="nome" />
                             </cellValueFactory>
                         </TableColumn>
-                        <TableColumn prefWidth="75.0" text="%tbl.descricao.txt">
+                        <TableColumn minWidth="0.0" prefWidth="305.0" text="%tbl.descricao.txt">
                             <cellValueFactory>
                                 <PropertyValueFactory property="descricao" />
                             </cellValueFactory>
@@ -51,17 +50,17 @@
                         <ContextMenu>
                             <items>
                                 
-                                <MenuItem fx:id="mnIncluir" mnemonicParsing="false" onAction="#acIncluir" text="Incluir">
+                                <MenuItem fx:id="mnIncluir" mnemonicParsing="false" onAction="#acIncluir" text="%mn.incluir.txt">
                                     <graphic>
                                         <MaterialDesignIconView glyphName="PLUS" size="1.1em" />
                                     </graphic>
                                 </MenuItem>
-                                <MenuItem fx:id="mnAlterar" mnemonicParsing="false" onAction="#acAlterar" text="Alterar">
+                                <MenuItem fx:id="mnAlterar" mnemonicParsing="false" onAction="#acAlterar" text="%mn.alterar.txt">
                                     <graphic>
                                         <MaterialDesignIconView glyphName="PENCIL" size="1.1em" />
                                     </graphic>
                                 </MenuItem>
-                                <MenuItem fx:id="mnExcluir" mnemonicParsing="false" onAction="#acExcluir" text="Excluir">
+                                <MenuItem fx:id="mnExcluir" mnemonicParsing="false" onAction="#acExcluir" text="%mn.excluir.txt">
                                     <graphic>
                                         <MaterialDesignIconView glyphName="DELETE" size="1.1em" />
                                     </graphic>
