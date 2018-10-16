@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.*?>
+<?import de.jensd.fx.glyphs.materialdesignicons.*?>
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CRUDPremioController">
+        <children>
+        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox>
+                    <children>
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="%tbl.nome.txt" />
+                                <TextField fx:id="txtFldNome" prefHeight="25.0" prefWidth="330.0" />
+                            </children>
+
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </VBox>
+                        <VBox spacing="5.0" />
+                                                <VBox spacing="5.0">
+                            <children>
+                                <Label text="%tbl.descricao.txt" />
+                                <TextField fx:id="txtFldDescricao" prefHeight="25.0" prefWidth="330.0" />
+                            </children>
+
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </VBox>
+                        <VBox spacing="5.0" />
+                    </children>
+                </HBox>
+            <HBox alignment="BOTTOM_RIGHT">
+               <children>
+                        <Button fx:id="btnConfirma" mnemonicParsing="false" onAction="#btnConfirmaClick" prefWidth="100.0" text="Confirma">
+                            <graphic>
+                                <MaterialDesignIconView glyphName="CHECK" />
+                            </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnCancelaClick" prefWidth="100.0" text="Cancela">
+                            <graphic>
+                                <MaterialDesignIconView glyphName="CLOSE" />
+                            </graphic>
+                        </Button>
+               </children>
+            </HBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
