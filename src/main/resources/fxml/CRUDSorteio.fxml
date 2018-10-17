@@ -17,7 +17,7 @@
             <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label fx:id="lblDescPremio" textFill="RED" text="%lbl.descpremio.txt">
+                  <Label fx:id="lblDescPremio" text="%lbl.descpremio.txt" textFill="RED">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font></Label>
@@ -26,6 +26,8 @@
                                 <Font name="Arial" size="14.0" />
                             </font>
                         </Label>
+                  <Label fx:id="lblSorteadoFoi" text="%lbl.sorteado.txt" />
+                  <Label fx:id="lblSorteado" />
 
                </children>
                <padding>

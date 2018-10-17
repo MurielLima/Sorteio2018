@@ -18,13 +18,13 @@ public class PrincipalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-//        for(Premio p: premioRepository.findAll()){
-//            p.setDisponivel(true);
-//            premioRepository.save(p);
-//        }
-//        for(Pessoa p: pessoaRepository.findAll()){
-//            p.setIdPremio(null);
-//            pessoaRepository.save(p);
-//        }
+        for(Premio p: premioRepository.findAll()){
+            p.setDisponivel(true);
+            premioRepository.save(p);
+        }
+        for(Pessoa p: pessoaRepository.findAll()){
+            p.setIdPremio(null);
+            pessoaRepository.save(p);
+        }
     }    
 }
