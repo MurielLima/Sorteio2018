@@ -30,6 +30,10 @@ public class Pessoa {
         return idPremio;
     }
 
+    public String getIdPessoa() {
+        return idPessoa;
+    }
+
     public void setIdPremio(Premio idPremio) {
         this.idPremio = idPremio;
     }

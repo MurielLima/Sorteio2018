@@ -64,14 +64,14 @@ public class PessoaController implements Initializable {
     @FXML
     private void acAlterar() {
         acao = ALTERAR;
-        pessoa = tblView.getSelectionModel().getSelectedItem();
+        pessoa = pessoaRepository.findByIdPessoa(tblView.getSelectionModel().getSelectedItem().getIdPessoa());
         showCRUD();
     }
 
     @FXML
     private void acExcluir() {
         acao = EXCLUIR;
-        pessoa = tblView.getSelectionModel().getSelectedItem();
+        pessoa = pessoaRepository.findByIdPessoa(tblView.getSelectionModel().getSelectedItem().getIdPessoa());
         showCRUD();
     }
 

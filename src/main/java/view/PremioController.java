@@ -67,14 +67,14 @@ public class PremioController implements Initializable {
     @FXML
     private void acAlterar() {
         acao = ALTERAR;
-        premio = tblView.getSelectionModel().getSelectedItem();
+        premio = premioRepository.findByIdPremio(tblView.getSelectionModel().getSelectedItem().getIdPremio());
         showCRUD();
     }
 
     @FXML
     private void acExcluir() {
         acao = EXCLUIR;
-        premio = tblView.getSelectionModel().getSelectedItem();
+        premio = premioRepository.findByIdPremio(tblView.getSelectionModel().getSelectedItem().getIdPremio());
         showCRUD();
     }
 

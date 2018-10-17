@@ -59,17 +59,8 @@ public class CRUDPessoaController implements Initializable {
                     pessoaRepository.save(controllerPai.pessoa);
                     break;
                 case EXCLUIR:
-                    if (controllerPai.pessoa.getPremio() != null) {
-                        pessoaRepository.delete(controllerPai.pessoa);
-                    } else {
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("Erro");
-                        alert.setHeaderText("Cadastro de Pessoa");
-                        alert.setContentText("Código já cadastrado");
-                        alert.showAndWait();
-                    }
+                    pessoaRepository.delete(controllerPai.pessoa);
                     break;
-
             }
             controllerPai.tblView.setItems(
                     FXCollections.observableList(pessoaRepository.findAll(

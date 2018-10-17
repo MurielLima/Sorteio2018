@@ -51,6 +51,8 @@ public class CRUDSorteioController implements Initializable {
     @FXML
     private Label lblPremio;
     @FXML
+    private Label lblDescPremio;
+    @FXML
     private TableView tblView;
 
     public void setCadastroController(SorteioController controllerPai) {
@@ -76,6 +78,11 @@ public class CRUDSorteioController implements Initializable {
                             (lstPessoa.get(0)).setIdPremio(prVez);
                             premioRepository.save(prVez);
                             pessoaRepository.save(lstPessoa.get(0));
+//                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//                            alert.setTitle("SORTEIO");
+//                            alert.setHeaderText("O ganhador do sorteio foi:");
+//                            alert.setContentText("");
+//                            alert.showAndWait();
                             timeline.stop();
                         }
                     }
@@ -87,10 +94,12 @@ public class CRUDSorteioController implements Initializable {
     public void btnSorteioClick(Event event) {
         if (lstPremio.size() > 0) {
             btnFecharSorteio.setDisable(true);
+            btnIniciarSorteio.setDisable(true);
             Integer posPremio = rand.nextInt(lstPremio.size());
             prVez = lstPremio.get(posPremio);
             prVez.setDisponivel(false);
             lblPremio.setText(prVez.getNome());
+            lblDescPremio.setVisible(true);
             tempo();
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -130,6 +139,7 @@ public class CRUDSorteioController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        lblDescPremio.setVisible(false);
         iniciaListas();
         if (lstPessoa.size() < 2) {
             btnFecharSorteio.setDisable(false);

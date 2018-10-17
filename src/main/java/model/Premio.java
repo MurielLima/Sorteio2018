@@ -69,6 +69,10 @@ public class Premio {
         return disponivel;
     }
 
+    public String getIdPremio() {
+        return idPremio;
+    }
+
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }

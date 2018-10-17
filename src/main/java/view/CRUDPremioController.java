@@ -40,7 +40,7 @@ public class CRUDPremioController implements Initializable {
     public void setCadastroController(PremioController controllerPai) {
         this.controllerPai = controllerPai;
         txtFldNome.setText(controllerPai.premio.getNome());
-        txtFldDescricao.setText(controllerPai.premio.getNome());
+        txtFldDescricao.setText(controllerPai.premio.getDescricao());
         txtFldNome.setDisable(controllerPai.acao == EXCLUIR);
         txtFldDescricao.setDisable(controllerPai.acao == EXCLUIR);
     }
@@ -59,7 +59,15 @@ public class CRUDPremioController implements Initializable {
                     premioRepository.save(controllerPai.premio);
                     break;
                 case EXCLUIR:
-                    premioRepository.delete(controllerPai.premio);
+                    if (controllerPai.premio.isDisponivel()) {
+                        premioRepository.delete(controllerPai.premio);
+                    } else {
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Erro");
+                        alert.setHeaderText("Exclusão de Premio");
+                        alert.setContentText("Existe um ganhador para esse prêmio. Primeiro exclua o Ganhador!!");
+                        alert.showAndWait();
+                    }
                     break;
             }
             controllerPai.tblView.setItems(
