@@ -53,7 +53,7 @@ public class SorteioController implements Initializable {
             }
         }
         for (Premio p : premioRepository.findAll(new Sort(new Sort.Order("nome")))) {
-            if (!p.isDisponivel()) {
+            if (p.isDisponivel()) {
                 premio.add(p);
             }
             tblViewPessoa.refresh();

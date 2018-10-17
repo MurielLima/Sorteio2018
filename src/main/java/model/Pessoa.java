@@ -5,6 +5,7 @@
  */
 package model;
 
+import static config.DAO.premioRepository;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -34,7 +35,9 @@ public class Pessoa {
     }
 
 
-
+    public String getPremio(){
+        return idPremio.getNome();
+    }
     public boolean isSorteado() {
         return (idPremio != null);
     }

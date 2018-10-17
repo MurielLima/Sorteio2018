@@ -11,5 +11,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  */
 public interface PremioRepository extends MongoRepository<Premio, String> {
 public List<Premio> findByNomeLikeIgnoreCase(String nome);
+public Premio findByIdPremio(String idPremio);
 
 }

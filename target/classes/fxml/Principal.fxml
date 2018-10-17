@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="501.0" prefWidth="777.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="view.PrincipalController">
+     <children>
+        <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="%lbl.titulo.txt">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                    </padding>
+                </Label>
+                <TabPane tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="%lbl.pessoa.txt">
+                            <content>
+                                <fx:include source="Pessoa.fxml" />
+                            </content>
+                        </Tab>
+                        <Tab text="%lbl.premio.txt">
+                            <content>
+                                <fx:include source="Premio.fxml" />
+                            </content>
+                        </Tab>
+                        <Tab text="%lbl.sorteio.txt">
+                            <content>
+                                <fx:include source="Sorteio.fxml" />
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -15,16 +15,20 @@
     <children>
         <VBox prefHeight="400.0" prefWidth="600.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <HBox prefHeight="100.0" prefWidth="200.0">
-                    <children>
-                        <Label text="%lbl.premios.txt" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="O Prêmio sorteado é:" />
                         <Label fx:id="lblPremio">
                             <font>
                                 <Font name="Arial" size="14.0" />
                             </font>
                         </Label>
-                    </children>
-                </HBox>
+
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
                 <TableView fx:id="tblView" prefHeight="350.0" prefWidth="310.0">
                     <columns>
                         <TableColumn prefWidth="75.0" text="%tbl.nome.txt">
@@ -46,8 +50,10 @@
                     
                         <Button fx:id="btnFecharSorteio" mnemonicParsing="false" onAction="#btnFecharSorteioClick" prefWidth="100.0" text="%btn.fechar.txt">
                         </Button>
-                        <Button fx:id="btnIniciarSorteio" mnemonicParsing="false" onAction="#btnSorteioClick" prefWidth="100.0" text="%btn.iniciar.txt">
+                        <Button fx:id="btnIniciarSorteio" mnemonicParsing="false" onAction="#btnSorteioClick" prefWidth="100.0" text="%btn.abrir.txt">
                         </Button>
+                        
+                        
                     </children>
                 </HBox>
             </children>

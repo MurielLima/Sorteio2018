@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 <?import de.jensd.fx.glyphs.materialdesignicons.*?>
 
-<AnchorPane id="AnchorPane"  prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SorteioController">
+<AnchorPane id="AnchorPane" prefHeight="427.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SorteioController">
     <children>
         <VBox prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -31,11 +31,16 @@
                                 <PropertyValueFactory property="nome" />
                             </cellValueFactory>
                         </TableColumn>
-                        <TableColumn prefWidth="305.0" text="%tbl.url.txt">
+                        <TableColumn prefWidth="192.0" text="%tbl.url.txt">
                             <cellValueFactory>
                                 <PropertyValueFactory property="url" />
                             </cellValueFactory>
                         </TableColumn>
+                  <TableColumn maxWidth="400.0" prefWidth="241.0" text="%tbl.premio.txt">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="premio" />
+                     </cellValueFactory>
+                  </TableColumn>
          
                     </columns>
                 </TableView>

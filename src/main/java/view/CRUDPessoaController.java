@@ -49,7 +49,7 @@ public class CRUDPessoaController implements Initializable {
     private void btnConfirmaClick() {
         controllerPai.pessoa.setUrl(txtFldURL.getText());
         controllerPai.pessoa.setNome(txtFldNome.getText());
-        
+
         try {
             switch (controllerPai.acao) {
                 case INCLUIR:
@@ -59,8 +59,17 @@ public class CRUDPessoaController implements Initializable {
                     pessoaRepository.save(controllerPai.pessoa);
                     break;
                 case EXCLUIR:
-                    pessoaRepository.delete(controllerPai.pessoa);
+                    if (controllerPai.pessoa.getPremio() != null) {
+                        pessoaRepository.delete(controllerPai.pessoa);
+                    } else {
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Erro");
+                        alert.setHeaderText("Cadastro de Pessoa");
+                        alert.setContentText("Código já cadastrado");
+                        alert.showAndWait();
+                    }
                     break;
+
             }
             controllerPai.tblView.setItems(
                     FXCollections.observableList(pessoaRepository.findAll(

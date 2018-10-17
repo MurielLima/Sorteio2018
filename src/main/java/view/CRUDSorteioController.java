@@ -69,6 +69,7 @@ public class CRUDSorteioController implements Initializable {
                         lstPessoa.remove(pessoaTmp);
                         tblView.refresh();
                         tblView.setItems(FXCollections.observableList(lstPessoa));
+                        tblView.getSelectionModel().select(rand.nextInt(lstPessoa.size()));
                         if (lstPessoa.size() == 1) {
                             btnFecharSorteio.setDisable(false);
                             btnIniciarSorteio.setDisable(true);
